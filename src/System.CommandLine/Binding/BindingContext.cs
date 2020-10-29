@@ -55,7 +55,7 @@ namespace System.CommandLine.Binding
 
         public ModelBinder GetModelBinder(IValueDescriptor valueDescriptor)
         {
-            if (_modelBindersByValueDescriptor.TryGetValue(valueDescriptor.ValueType, out ModelBinder binder))
+            if (_modelBindersByValueDescriptor.TryGetValue(valueDescriptor.ValueType, out ModelBinder? binder))
             {
                 return binder;
             }
